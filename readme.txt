@@ -6,4 +6,3 @@ Functionaliteiten:
     3 Kaart van Amsterdam 
     4 Mensen kunnen een locatie neerzetten om een spelletje schaken te spelen.
     5 Na het meeten moeten beide personen een knop indrukken om ervoor te zorgen dat de elo veranderd. 
-
