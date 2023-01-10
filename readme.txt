@@ -6,3 +6,8 @@ Functionaliteiten:
     3 Kaart van Amsterdam 
     4 Mensen kunnen een locatie neerzetten om een spelletje schaken te spelen. Middels telefoonnummer achterlaten. 
     5 Na het meeten moeten beide personen een knop indrukken om ervoor te zorgen dat de elo veranderd. 
+
+
+https://www.youtube.com/watch?v=uFe7bsWOObo
+
+docker run --name lamp -it ubuntu
