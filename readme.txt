@@ -1,12 +1,19 @@
-REAL LIFE SCHAKEN ELO SYSTEEM
+Suplementen verkoop:
 
-Functionaliteiten: 
-    1 Mensen kunnen een account maken en krijgen een standaard elo aangewezen
-    2 Je kan mensen zien die op de app zitten en hun desbetreffende elo
-    3 Kaart van Amsterdam 
-    4 Mensen kunnen een locatie neerzetten om een spelletje schaken te spelen. Middels telefoonnummer achterlaten. 
-    5 Na het meeten moeten beide personen een knop indrukken om ervoor te zorgen dat de elo veranderd. 
-
+functies:
+    1 overzicht whey protein supplementen smaken
+    op scroll down
+    2 informatie per smaak:
+        prijs
+        knoppen voor hoeveelheden
+        knoppen over quantiteit '+ en -'
+        informatie over het product
+        ingrediënten
+        voedingswaarde
+    3 knop om product aan winkelwagen toe te voegen
+    4 winkelmand die producten bewaart
+    5 checkout pagina, zonder echte betaling
+        optie voor kortingscodes
 
 https://www.youtube.com/watch?v=uFe7bsWOObo
 
