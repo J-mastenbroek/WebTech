@@ -1,0 +1,127 @@
+/*Hierin variabelen aanpassen om alle kleuren aan te passen op de site*/
+:root{
+    --main_color: #d7eaf3;
+    --secondairy_color: #4d645e;
+    --detail_color: #657672;
+}
+
+*{
+    list-style: none;
+    text-decoration: none;
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Oswald';font-size: 22px;
+
+}
+
+nav{
+    height: 80px;
+    background-color: var(--secondairy_color);
+}
+
+nav img{
+    width: 150px;
+    position: absolute;
+    top: 17px;
+    left: 12%;
+}
+
+nav ul{
+    float:right;
+    margin-right: 25px;
+}
+
+nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 15px;
+}
+
+nav ul li a{
+    position: relative;
+    color: white;
+    font-size: 18p;
+    text-transform: uppercase;
+    padding: 5px 0;
+}
+
+nav ul li a:before{
+    position: absolute;
+    content: '';
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 100%;
+    background: white;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform .4s linear;
+    
+}
+
+nav ul li a:hover:before{
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+label #btn,
+label #cancel{
+    color: white;
+    font-size: 30px;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+#check{
+    display: none;
+}
+
+/* mediqueries zodat het toegankelijk word op tablet en pc*/
+@media (max-width: 1118px){
+    nav img{
+        left: 8%;
+    }
+}
+
+@media (max-width: 944px){
+    nav img{
+        left: 6%;
+        top: 20px;
+        width: 130px;
+    }
+    nav ul li a{
+        font-size: 17px;
+    }
+}
+
+/*mediaqueries zodat het voor mobile een dropdown menukrijgt*/
+@media (max-width: 860px){
+    label #btn{
+        display: block;
+    }
+    ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: var(--detail_color);
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+    nav ul li{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    nav ul li a{
+        font-size: 20px;
+    }
+
+    #check:checked ~ ul{
+        left: 0;
+    }
+}
