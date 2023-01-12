@@ -15,6 +15,16 @@ functies:
     5 checkout pagina, zonder echte betaling
         optie voor kortingscodes
 
+paginas opmaak 
+
+rolverdeling
+datastructuren 3nf: 
+
+datastructuren in php en mysql zetten: 
+
+html, css en jscript frontend: 
+
+
 https://www.youtube.com/watch?v=uFe7bsWOObo
 
 docker run --name lamp -it ubuntu
