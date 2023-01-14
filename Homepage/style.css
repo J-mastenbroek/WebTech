@@ -11,7 +11,6 @@
     margin: 0px;
     padding: 0px;
     font-family: 'Oswald';font-size: 22px;
-
 }
 
 nav{
@@ -19,15 +18,29 @@ nav{
     background-color: var(--secondairy_color);
 }
 
-nav img{
+.icons{
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    margin: 0 5px;
+    line-height: 80px;
+}
+
+.icontainer{
+    float: right;
+    margin-top: 20px;
+}
+
+.logo{
     height: 200px;
     width: 200px;
     position: fixed;
     top: -50px;
+    left: 50%;
 }
 
 nav ul{
-    float:right;
+    float: left;
     margin-right: 25px;
 }
 
@@ -55,7 +68,7 @@ nav ul li a:before{
     background: white;
     transform: scaleX(0);
     transform-origin: right;
-    transition: transform .4s linear;
+    transition: transform .2s linear;
     
 }
 
@@ -81,14 +94,12 @@ label #cancel{
 
 /* mediqueries zodat het toegankelijk word op tablet en pc*/
 @media (max-width: 1118px){
-    nav img{
-        /*logo*/
-    }
-}
-
-@media (max-width: 944px){
-    nav ul li a{
-        font-size: 17px;
+    .logo{
+        height: 200px;
+        width: 200px;
+        position: fixed;
+        top: -50px;
+        left: 50%;
     }
 }
 
@@ -96,6 +107,8 @@ label #cancel{
 @media (max-width: 860px){
     label #btn{
         display: block;
+        margin-left: 10px;
+        margin-right: 5px;
     }
     ul{
         position: fixed;
@@ -118,5 +131,17 @@ label #cancel{
 
     #check:checked ~ ul{
         left: 0;
+    }
+    .logo{
+        left: 0;
+    }
+    .icons{
+        width: 30px;
+        height: 30px;
+        margin: 0 0px;;
+    }
+
+    .icontainer{
+        margin-top: 24px;
     }
 }
