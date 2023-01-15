@@ -165,7 +165,6 @@ body{
 
 .right-container{
     grid-column: 2;
-    background-color: gray;
 }
 
 .picture{
@@ -211,4 +210,43 @@ button:hover{
     background-color: black;
     border-radius: 10px;
     transition: all 0.7s;
+}
+
+.mobile{
+    display: none;
+}
+
+/* accesible for phone */ 
+@media (max-width: 860px){
+    .left-container{
+        display: none;
+    }
+
+    .right-container{
+        grid-column: 1;
+    }
+    .picture{
+        width: 100%;
+        z-index: -1;
+    }
+    .mobile{
+        display: inline;
+        z-index: -1;
+    }
+    h1{
+        top: 25%;
+        text-align: center;
+        font-size: 36px;
+    }
+    article{
+        text-align: center;
+        position: relative;
+        left: 30%;
+        z-index: -1;
+    }
+    button{
+        margin-top: 20px;
+        height: 60px;
+        width: 120px;
+    }
 }
