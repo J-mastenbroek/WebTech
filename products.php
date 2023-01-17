@@ -16,7 +16,7 @@
 
     if ($resultCheck > 0) {
         while ($row = mysqli_fetch_assoc($result)) {
-            echo $row['smaak'];
+            echo $row['smaak'] . "<br>";
 
         }
     }
