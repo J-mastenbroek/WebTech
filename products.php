@@ -19,11 +19,11 @@
                 <label for="check">
                     <i class="fas fa-bars" id="btn"></i>
                 </label>
-                <a href="index.html">
+                <a href="index.php">
                     <img src="fotos/fitpointer_logo.jpg" class="logo" onclick="window.loaction.href='index.html';">
                 </a>
                 <ul>
-                    <li><a href="products.html" class="item">Products</a></li>
+                    <li><a href="products.php" class="item">Products</a></li>
                     <li><a href="contact.html" class="item">Contact</a></li>
                     <li><a href="about.html" class = "item">About us</a></li>
                 </ul>
