@@ -1,6 +1,3 @@
-<?php
-    include_once('connection.php');
-?>
 
 <!DOCTYPE html>
 <html>
@@ -33,21 +30,39 @@
                 </div>
             </nav>
     </header>
-<?php
-    $sql = "SELECT * FROM products;";
-    $result = mysqli_query($conn, $sql);
-    $resultCheck = mysqli_num_rows($result);
 
-    if ($resultCheck > 0) {
-        while ($row = mysqli_fetch_assoc($result)) {
 
-            echo $row['smaak'] .' ' . '(' . $row['gewicht (kg)'] . 'kg) ' . $row['prijs'] . "<br>";
 
-        }
+
+<section class="signup-form">
+    <h2>Log In</h2>
+
+    <div class="singup-form-form">
+
+    <form action="login.inc.php" method="post">
+    <input type="text" name="name" placeholder="Username/Email...">
+    <input type="password" name="pwd" placeholder="Password...">
+    <button type="submit" name="submit">Log In</button>
+
+    </form>
+
+    </div>
+
+    <?php
+
+if (isset($_GET["error"])) {
+    if ($_GET["error"] == "emptyinput") {
+        echo "<p>Please fill in all fields.</p>";
     }
-
+    elseif ($_GET["error"] == "wronglogin") {
+        echo "<p>Incorrect login information.</p>";
+}
+}
 
 ?>
+
+
+</section>
 
 </body>
 
