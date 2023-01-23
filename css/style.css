@@ -293,18 +293,40 @@ span{
 
 .groupimg{
     display: block;
+    box-sizing: border-box;
     margin-left: auto;
     margin-right: auto;
     top: 100px;
     position: relative;
+    width: 50%;
+    height: auto;
 }
 .socials{
     position: relative;
     margin: auto;
     top: 200px;
-    right: -47%;
+    right: -45%;
 }
 .socialicons{
     height: 48px;
     width: 48px;
+}
+
+
+/* phone support about us */
+@media (max-width: 860px){
+    .groupimg{
+        top: 100px;
+        position: relative;
+        width: 80%;
+        height: auto;
+    }
+
+    .socials{
+        position: relative;
+        margin: auto;
+        top: 200px;
+        right: -40%;
+    }
+
 }
