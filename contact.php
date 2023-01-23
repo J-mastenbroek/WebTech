@@ -1,11 +1,13 @@
 <?php
-    include_once('connection.php');
-    include_once('header.php');
+
+    include_once 'header.php';
+
+
 ?>
 
 <!DOCTYPE html>
 <html>
-<head>
+    <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Shop</title>
@@ -15,24 +17,6 @@
     </head>
     <body>
 
-
-<?php
-
-    $sql = "SELECT * FROM products;";
-    $result = mysqli_query($conn, $sql);
-    $resultCheck = mysqli_num_rows($result);
-
-    if ($resultCheck > 0) {
-        while ($row = mysqli_fetch_assoc($result)) {
-
-            echo $row['smaak'] .' ' . '(' . $row['gewicht (kg)'] . 'kg) ' . $row['prijs'] . "<br>";
-
-        }
-    }
-
-
-?>
-
-</body>
-
+    
+    </body>
 </html>

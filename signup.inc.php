@@ -22,6 +22,12 @@ if (isset($_POST["submit"])) {
         exit();
     }
 
+    if (tooLongUsername($username) !== false) {
+        header("location: signup.php?error=usernametoolong");
+        exit();
+    }
+
+
     if (invalidEmail($email) !== false) {
         header("location: signup.php?error=invalidemail");
         exit();

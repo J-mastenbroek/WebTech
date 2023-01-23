@@ -330,3 +330,132 @@ span{
     }
 
 }
+
+/*signup page*/
+.signupform{
+    width: 400px;
+    display: flex;
+    margin: auto;
+    padding-top: 200px;
+}
+
+input[type=text], input[type=password] {
+    width: 92%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+  }
+  
+input[type=text]:focus, input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+  }
+
+.signupform button {
+    background-color: var(--main_color);
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+  }
+  
+.signupform button:hover {
+    color: white;
+    border: none;
+    background-color: #04AA6D;
+    border-radius: 10px;
+    transition: all 0.7s;
+}
+
+.title h1{
+    position: relative;
+    top: 150px;
+    text-align: center;
+}
+
+/* mobile support sign up */
+@media (max-width: 860px){
+    .signupform{
+        width: 300px;
+    }
+}
+
+/* login form */
+.loginpage{
+    width: 400px;
+    display: flex;
+    margin: auto;
+    padding-top: 200px;
+}
+
+.loginpage button {
+    background-color: var(--main_color);
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+}
+
+.loginpage button:hover {
+    color: white;
+    border: none;
+    background-color: #04AA6D;
+    border-radius: 10px;
+    transition: all 0.7s;
+}
+
+.registerwarning{
+    width: 500px;
+    display: flex;
+    margin: auto;
+    padding-top: 30px;
+}
+
+/* Drop down menu */
+.slide{
+    position: fixed;
+    right: 0;
+    top: 80px;
+    background-color: var(--detail_color);
+    z-index: 2;
+    width: 300px;
+    visibility: hidden;
+}
+
+.slide p{
+    font-size: 28px;
+    text-align: center;
+    color: white;
+}
+
+.slide .textloader{
+    top: 15px;
+    position: relative;
+}
+
+.slide button{
+    background-color: var(--detail_color);
+    color: white;
+    height: 60px;
+    width: 100%;
+    border-top: 1px solid white;
+    border-bottom: none;
+    border-left: none;
+    border-right: none;
+}
+
+.slide button:hover {
+    color: white;
+    border: none;
+    background-color: #f44336;
+    transition: all 0.7s;
+}
+

@@ -1,3 +1,10 @@
+<?php
+
+    include_once 'header.php';
+
+
+?>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -9,28 +16,7 @@
         <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet'>
     </head>
     <body>
-        <header>
-            <div class="navbar">
-                <nav>
-                    <input type="checkbox" id="check">    
-                    <label for="check">
-                        <i class="fas fa-bars" id="btn"></i>
-                    </label>
-                    <a href="index.php">
-                        <img src="fotos/fitpointer_logo.jpg" class="logo" onclick="window.loaction.href='index.html';">
-                    </a>
-                    <ul>
-                        <li><a href="products.php" class="item">Products</a></li>
-                        <li><a href="contact.html" class="item">Contact</a></li>
-                        <li><a href="about.html" class = "item">About us</a></li>
-                    </ul>
-                    <div class="icontainer">
-                        <img src="fotos/shopping_cart_icon.png" class="icons">
-                        <img src="fotos/user_icon.png" class="icons">
-                    </div>
-                </nav>
-            </div>
-    </header>
+
     <div class="imagecontainer">
         <img src="fotos/aboutuspage.png" class="groupimg">
     </div>

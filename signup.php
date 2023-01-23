@@ -1,3 +1,9 @@
+<?php
+
+    include_once 'header.php';
+
+
+?>
 
 <!DOCTYPE html>
 <html>
@@ -10,46 +16,25 @@
         <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet'>
     </head>
     <body>
-        <header>
-            <nav>
-                <input type="checkbox" id="check">    
-                <label for="check">
-                    <i class="fas fa-bars" id="btn"></i>
-                </label>
-                <a href="index.html">
-                    <img src="fotos/fitpointer_logo.jpg" class="logo" onclick="window.loaction.href='index.html';">
-                </a>
-                <ul>
-                    <li><a href="products.html" class="item">Products</a></li>
-                    <li><a href="contact.html" class="item">Contact</a></li>
-                    <li><a href="about.html" class = "item">About us</a></li>
-                </ul>
-                <div class="icontainer">
-                    <img src="fotos/shopping_cart_icon.png" class="icons">
-                    <img src="fotos/user_icon.png" class="icons">
-                </div>
-            </nav>
-    </header>
 
 
-
-
+<div class="title">
+    <h1>Create an account</h1>
+</div>
 <section class="signup-form">
-    <h2>Sign Up</h2>
-
-    <div class="singup-form-form">
-
-    <form action="signup.inc.php" method="post">
-    <input type="text" name="name" placeholder="Full name...">
-    <input type="text" name="email" placeholder="Email...">
-    <input type="text" name="uid" placeholder="Username...">
-    <input type="password" name="pwd" placeholder="Password...">
-    <input type="password" name="pwdrepeat" placeholder="Repeat password...">
-    <button type="submit" name="submit">Sign Up</button>
-
-    </form>
-
+        <div class = signupform>
+            <div class="singup-form-form">
+                <form action="signup.inc.php" method="post">
+                    <input type="text" name="name" placeholder="Full name">
+                    <input type="text" name="email" placeholder="Email">
+                    <input type="text" name="uid" placeholder="Username">
+                    <input type="password" name="pwd" placeholder="Password">
+                    <input type="password" name="pwdrepeat" placeholder="Repeat password">
+                <button type="submit" name="submit">Sign Up</button>
+            </form>
+        </div>
     </div>
+
 
     <?php
 
@@ -59,6 +44,9 @@ if (isset($_GET["error"])) {
     }
     elseif ($_GET["error"] == "invaliduid") {
         echo "<p>Please choose a proper username.</p>";
+    }
+    elseif ($_GET["error"] == "usernametoolong") {
+        echo "<p>Username too long. Max 16 characters.</p>";
     }
     elseif ($_GET["error"] == "invalidemail") {
         echo "<p>Please choose a proper email.</p>";

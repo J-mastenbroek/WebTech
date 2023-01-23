@@ -28,6 +28,19 @@ function invalidUid($username) {
 
 }
 
+function tooLongUsername($username) {
+
+    $result;
+    if (strlen($username) > 16) {
+        $result = true;
+    }
+    else {
+        $result = false;
+    }
+    return $result;
+
+}
+
 
 
 function invalidEmail($email) {
@@ -60,7 +73,7 @@ function pwdMatch($pwd, $pwdRepeat) {
 
 function uidExists($conn, $username, $email) {
 
-    $sql = "SELECT * FROM users WHERE id = ? OR email = ?;";
+    $sql = "SELECT * FROM users WHERE username = ? OR email = ?;";
     $stmt = mysqli_stmt_init($conn);
     
     if (!mysqli_stmt_prepare($stmt, $sql)) {
@@ -128,7 +141,7 @@ function loginUser($conn, $username, $pwd) {
     $uidExists = uidExists($conn, $username, $username);
 
     if ($uidExists === false) {
-        header("location: signup.php?error=wronglogin");
+        header("location: login.php?error=wronglogin");
         exit();
     }
 
@@ -143,7 +156,7 @@ function loginUser($conn, $username, $pwd) {
         session_start();
         $_SESSION["userid"] = $uidExists["id"];
         $_SESSION["useruid"] = $uidExists["username"];
-        header("location: index.html");
+        header("location: index.php");
         exit();
     }
 }

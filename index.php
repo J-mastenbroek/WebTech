@@ -1,3 +1,7 @@
+<?php
+
+    include_once 'header.php';
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,37 +14,7 @@
     <script src="scripts/script.js" defer></script>
 </head>
 <body>
-    <header>
-            <nav>
-                <input type="checkbox" id="check">    
-                <label for="check">
-                    <i class="fas fa-bars" id="btn"></i>
-                </label>
-                <a href="index.php">
-                    <img src="fotos/fitpointer_logo.jpg" class="logo" onclick="window.loaction.href='index.html';">
-                </a>
-                <ul>
-                    <li><a href="products.php" class="item">Products</a></li>
-                    <li><a href="contact.html" class="item">Contact</a></li>
-                    <li><a href="about.html" class = "item">About us</a></li>
-                </ul>
-                <div class="icontainer">
-                    <img src="fotos/shopping_cart_icon.png" class="icons">
 
-                    <!--Nieuw stuk code: -->
-                    <?php
-
-                    if (isset($_SESSION["useruid"])) {
-                        echo '<img src="fotos/user_icon.png" class="icons" >';
-                    }
-
-                    ?>
-                    
-
-                    <img src="fotos/user_icon.png" class="icons" >
-                </div>
-            </nav>
-    </header>
     <div class="container">
         <div class="left-container">
             <article>
@@ -57,7 +31,7 @@
             <div class="mobile">
                 <article>
                     <h1 class="mobile" id="text">Revolutionary protein for working out</h1>
-                    <button onmousedown="window.location.href='products.php'; console.log('kas')">SHOP</button>
+                    <button onmousedown="window.location.href='products.php';">SHOP</button>
                 </article>
             </div>
         </div>
