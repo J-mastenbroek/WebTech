@@ -16,6 +16,8 @@
 nav{
     height: 80px;
     background-color: var(--main_color);
+    position: fixed;
+    width: 100%;
 }
 
 .icons{
@@ -146,56 +148,74 @@ label #cancel{
     }
 }
 
-/* links text rechts foto*/
+/* foto links, prijzen en selectoren rechts, informatie onderaan*/
 body{
     background-color: var(--secondairy_color);
+    margin: 0;
 }
 
 .container{
-    position: absolute;
-    display: grid;
-    height: 92%;
+    height: 93.5%;
     width: 100%;
+    display: grid;
+    grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+    gap: 20px;
+    padding-left: 250px;
+    padding-right: 250px;
+    padding-top: 100px;
+    padding-bottom: 10px;
+    box-sizing: border-box;
+
 }
 
-.left-container{
-    grid-column: 1;
-    background-color: var(--secondairy_color);
+.container div{
+    padding: 10px;
+    border: 3px solid var(--detail_color)
+
 }
 
-.right-container{
-    grid-column: 2;
+.product_picture{
+    grid-column: 1 / span 2;
+    grid-row: 1 / span 3;
+
 }
 
-.picture{
-    position: absolute;
+#image{
+    width: 100%;
     height: 100%;
-    width: 50%;
-    right: 0;
 }
 
-article{
-    position: relative;
-    height: auto;
-    width: 40%;
-    top: 20%;
-    left: 5%;
+.product_name{
+    grid-row: 1 / span 2;
+    background-color: #657672a2;
+}
+.cart{
+    background-color: #657672a2;
+}
+.product_info{
+    grid-column: 1 / span 3;
 }
 
 h1{
-    text-align: left;
-    font-size: 52px;
-    color: black;
+    font-size: 35px;
+}
+
+.name{
+    font-size: 50px;
+    font-weight: bolder;
+}
+
+.pricetag{
+    font-weight: lighter;
 }
 
 p{
-    font-size: 28px;
-    color: black;
+    height: 100%;
+    width: 100%;
 }
 
 /* button + animatie */
 button{
-    margin-top: 40px;
     height: 80px;
     width: 200px;
     border-width: 5px;
@@ -209,20 +229,27 @@ button:hover{
     border: none;
     background-color: black;
     border-radius: 10px;
-    transition: all 0.7s;
+    transition: all 1s;
 }
 
 .mobile{
     display: none;
 }
 
+@media (max-width: 1600px){
+    #story1{
+        display: none
+    }
+
+}
+
 /* accesible for phone */ 
 @media (max-width: 860px){
-    .left-container{
+    .product_picture{
         display: none;
     }
 
-    .right-container{
+    .product_name{
         grid-column: 1;
     }
     .picture{
@@ -244,8 +271,8 @@ button:hover{
         left: 30%;
         z-index: -1;
     }
+
     button{
-        margin-top: 20px;
         height: 60px;
         width: 120px;
     }

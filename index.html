@@ -10,44 +10,147 @@
 </head>
 <body>
     <header>
-            <nav>
-                <input type="checkbox" id="check">    
-                <label for="check">
-                    <i class="fas fa-bars" id="btn"></i>
-                </label>
-                <img src="Fotos/fitpointer_logo.jpg" class="logo">
-                <ul>
-                    <li><a href="#" class="item">Products</a></li>
-                    <li><a href="#" class="item">Contact</a></li>
-                    <li><a href="#" class = "item">About us</a></li>
-                </ul>
-                <div class="icontainer">
-                    <img src="Fotos/shopping_cart_icon.png" class="icons">
-                    <img src="Fotos/user_icon.png" class="icons">
-                </div>
-            </nav>
+        <nav>
+            <input type="checkbox" id="check">    
+            <label for="check">
+                <i class="fas fa-bars" id="btn"></i>
+            </label>
+            <a href="index.html">
+                <img src="fotos/fitpointer_logo.jpg" class="logo" onclick="window.loaction.href='index.html';">
+            </a>
+            <ul>
+                <li><a href="products.php" class="item">Products</a></li>
+                <li><a href="about.html" class="item">Contact</a></li>
+                <li><a href="contact.html" class = "item">About us</a></li>
+            </ul>
+            <div class="icontainer">
+                <img src="fotos/shopping_cart_icon.png" class="icons">
+                <img src="fotos/user_icon.png" class="icons">
+            </div>
     </header>
     <div class="container">
-        <div class="left-container">
-            <article>
-                <h1>Revolutionary protein for working out</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus feugiat et arcu in fermentum. 
-                    Sed porta euismod nibh, vitae pretium sapien bibendum sit amet. Curabitur in accumsan tellus. 
-                    Sed quis risus elit. Integer faucibus sed enim sit amet aliquet. Donec scelerisque vehicula imperdiet. 
-                    Donec orci risus, sagittis nec lacus non, ornare laoreet lacus.</p>
-                <button href="#">SHOP</button>
-            </article>
+        <div class="product_picture">
+                <img src="fotos/placeholder.jpg" id="image">
         </div>
-        <div class="right-container">
-            <img src="Fotos/placeholder.jpg" class="picture">
-            <div class="mobile">
-                <article>
-                    <h1 class="mobile" id="text">Revolutionary protein for working out</h1>
-                    <button href="#">SHOP</button> 
-                </article>
-            </div>
+        <!--php insertion of product names and price with php--> 
+        <div class="product_name">
+            <h1 class="name">Product Name</h1>
+            <h2>The easiest and most efficient way of getting that protein in!</h2>
+            <br>
+            <h1 class="pricetag">Price</h1>
+            <br>
+            <p id="story1">Protein is one of the building blocks of bone, muscle, 
+                and skin. The body needs it to produce hormones, 
+                enzymes, and other chemicals. by supplementing in the
+                form of protein powder you gain benefits such as easier 
+                weight management, accelarated musle growth and faster 
+                recovery after exercise.
+            </p>
+        </div>  
+        <div class="cart">
+            <h2>Flavour:</h2>
+            <form>
+                <select name="Flavours">
+                    <option value="Banana">Banana</option>
+                    <option value="Chocolate">Chocolate</option>
+                    <option value="Vanilla">Vanilla</option>
+                </select>
+            </form>
+            <h2>Size:</h2>
+            <form>
+                <select name="Size">
+                    <option value="250 gram">250 gram</option>
+                    <option value="500 gram">500 gram</option>
+                    <option value="1 kilogram">1 kilogram</option>
+                    <option value="2 kilogram">2 kilogram</option>
+                </select>
+            </form>
+            <h2>Quantity:</h2>
+            <form>
+                <select name="Quantity">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                </select>
+            </form>
+            <button id="cart-button">Add to cart</button>
+        </div>
+
+        <div class="product_info">
+            <h1>Product Information</h1>
+            <form>
+                <option name="Nutrients">
+                    <table bgcolor="black">
+                        <tr bgcolor="darkgrey">
+                            <th width="180"></th>
+                            <th width="180">Per 100g</th>
+                            <th width="180">Per serving (25g)</th>
+                        </tr>
+                        <tr bgcolor="lightgrey" align="left">
+                            <th>Energy</th>
+                            <th><!--invullen met php--></th>
+                            <th></th>
+                        </tr>
+                        <tr bgcolor="grey" align="left">
+                            <th>Fat</th>
+                            <th></th>
+                            <th></th>
+                        </tr>
+                        <tr bgcolor="lightgrey" align="left">
+                            <th>Of which saturated</th>
+                            <th><!--invullen met php--></th>
+                            <th></th>
+                        </tr>
+                        <tr bgcolor="grey" align="left">
+                            <th>Carbohydrate</th>
+                            <th><!--invullen met php--></th>
+                            <th></th>
+                        </tr>
+                        <tr bgcolor="lightgrey" align="left">
+                            <th>Of which sugars</th>
+                            <th><!--invullen met php--></th>
+                            <th></th>
+                        </tr>
+                        <tr bgcolor="grey" align="left">
+                            <th>Fibre</th>
+                            <th><!--invullen met php--></th>
+                            <th></th>
+                        </tr>
+                        <tr bgcolor="lightgrey" align="left">
+                            <th>protein</th>
+                            <th><!--invullen met php--></th>
+                            <th></th>
+                        </tr>
+                        <tr bgcolor="grey" align="left">
+                            <th>salt</th>
+                            <th><!--invullen met php--></th>
+                            <th></th>
+                        </tr>
+                    </table>
+                </option>
+            </form>
         </div>
     </div>
 </body>
-
 </html>
+    
+
+
+
+<div class="mobile">
+        <article>
+            <h1 class="mobile" id="text">Revolutionary protein for working out</h1>
+            <button href="#">SHOP</button> 
+        </article>
+    </div>  
+ </div>
+ 
