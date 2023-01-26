@@ -26,7 +26,6 @@
             </ul>
             <div class="icontainer">
             <img src="fotos/shopping_cart_icon.png" class="icons">
-
             <?php
                 if (isset($_SESSION["useruid"])) {
                     echo '<a id="profileicon" onclick="showDropDown()">';
@@ -45,8 +44,8 @@
         //drop down menu for usericon
         let dropactive = false; 
         let slide = document.getElementsByClassName("slide");
-        console.log("scriot");
-
+        
+        //function to show dropdown
         function showDropDown(){
             if (dropactive == false){
                 slide[0].style.visibility = "visible";

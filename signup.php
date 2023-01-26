@@ -61,43 +61,13 @@ if (isset($_GET["error"])) {
         echo "<p>Username already taken.</p>";
     }
     elseif ($_GET["error"] == "none") {
-        echo "<p>You have signed up!.</p>";
+        echo "<p>You have signed up!</p>";
     }
 }
 
 ?>
 
 </section>
-
-<?php
-
-if (isset($_GET["error"])) {
-    if ($_GET["error"] == "") {
-        echo "<p>Please fill in all fields.</p>";
-    }
-    elseif ($_GET["error"] == "invaliduid") {
-        echo "<p>Please choose a proper username.</p>";
-    }
-    elseif ($_GET["error"] == "invalidemail") {
-        echo "<p>Please choose a proper email.</p>";
-    }
-    elseif ($_GET["error"] == "passworddontmatch") {
-        echo "<p>The passwords do not match</p>";
-    }
-    elseif ($_GET["error"] == "stmtfailed") {
-        echo "<p>Something went wrong. Try again!</p>";
-    }
-    elseif ($_GET["error"] == "usernametaken") {
-        echo "<p>Username already taken.</p>";
-    }
-    elseif ($_GET["error"] == "none") {
-        echo "<p>You have signed up!.</p>";
-    }
-}
-
-
-?>
-
 
 </body>
 

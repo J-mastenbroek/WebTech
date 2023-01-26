@@ -14,8 +14,8 @@
         <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet'>
     </head>
 <body>
-<div class=productcontainer>
-    <div class="products">
+
+<div class="products">
 <?php
 
     $sql = "SELECT * FROM products;";
@@ -25,20 +25,24 @@
     if ($resultCheck > 0) {
         while ($row = mysqli_fetch_assoc($result)) {
 
-            #echo $row['smaak'] .' ' . '(' . $row['prijs'] . "<br>";
-            #echo '<img src="fotos/products/proteine/'.$row['image'].'">';
+            $product_id = $row['productID'];
+            $product_smaak = $row['smaak'];
+            $product_categorie = $row['categorie'];
+            $product_prijs = $row['prijs'];
+            $product_image = $row['image'];
+            $product_leverancier = $row['leverancierID'];
 
-            echo '<div class="card">';
-            echo    '<img src="fotos/products/'.$row['image'].'"style="width:100%">';
-            echo    '<h1>'.$row['categorie'].'</h1>';
-            echo    '<p>'.$row['smaak'].'</p>';
-            echo    '<p class="price">€'.$row['prijs'].'</p>';
-            echo    '<p><button onclick="switchProduct();">View Product</button></p>';
-            echo '</div>';
+            echo"
+                <a href="productpage.php?pro_id=$product_id">
+
+
+                </a>
+            "
+
+
         }
     }
 ?>
-    </div>
 </div>
 <script>
     function switchProduct(){
