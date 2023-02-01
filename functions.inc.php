@@ -41,8 +41,6 @@ function tooLongUsername($username) {
 
 }
 
-
-
 function invalidEmail($email) {
 
     $result;
@@ -156,7 +154,63 @@ function loginUser($conn, $username, $pwd) {
         session_start();
         $_SESSION["userid"] = $uidExists["usersID"];
         $_SESSION["useruid"] = $uidExists["username"];
+
+        // potentiele sessie voor role
+        $stmt = $conn->prepare("SELECT role FROM users WHERE username = ?;");
+        $stmt->bind_param("s", $username);
+        $stmt->execute();
+        $stmt->store_result();
+        $stmt->bind_result($role);
+        $stmt->fetch();
+
+        $_SESSION["role"] = $role;
+
+
         header("location: index.php");
+
+        //Set auto fill in username cookie
+        setcookie("username", $_SESSION["useruid"], time()+30*24*60*60);
+
         exit();
     }
+}
+
+
+// functie voor het regelen van orders
+function add_order($conn, $usersID, $orderprice, $beschrijving) {
+
+    $sql = "INSERT INTO orders (usersID, orderprice, beschrijving) VALUES (?, ?, ?);";
+    $stmt = mysqli_stmt_init($conn);
+
+    if (!mysqli_stmt_prepare($stmt, $sql)) {
+        header("location: signup.php?error=stmtfailed");
+        exit();
+    }
+
+
+    mysqli_stmt_bind_param($stmt, "ids", $usersID, $orderprice, $beschrijving);
+    mysqli_stmt_execute($stmt);
+    mysqli_stmt_close($stmt);
+
+
+}
+
+
+// functie voor het verlagen van de stock na de bestelling
+function lower_stock($conn, $new_stock, $productID) {
+
+    $sql = "UPDATE `products` SET `in_stock`= ? WHERE productID = ?;";
+    $stmt = mysqli_stmt_init($conn);
+
+    if (!mysqli_stmt_prepare($stmt, $sql)) {
+        header("location: signup.php?error=stmtfailed");
+        exit();
+    }
+
+
+    mysqli_stmt_bind_param($stmt, "ii", $new_stock, $productID);
+    mysqli_stmt_execute($stmt);
+    mysqli_stmt_close($stmt);
+
+
 }

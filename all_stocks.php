@@ -39,13 +39,13 @@
 
 
 
-            echo '<div class="card">';
-            echo    '<img src="fotos/products/'.$row['image'].'"style="width:100%">';
-            echo    '<h1>'.$category_name.'</h1>';
-            echo    '<p>'.$row['smaak'].'</p>';
-            echo    '<p class="price">€'.$row['prijs'].'</p>';
-            echo    '<button onclick="switchProduct('.$row["productID"].');">View Product</button>';
-            echo    '</div>';
+            echo '<div class="card">
+                <img src="fotos/products/'.$row['image'].'"style="width:100%">
+                <h1>'.$category_name.'</h1>
+                <p>'.$row['smaak'].'</p>
+                <p class="price">In Stock: '.$row['in_stock'].'</p>
+                <button onclick="switchProduct('.$row["productID"].');">Change Stock</button>
+                </div>';
            
         }
     }
@@ -54,7 +54,7 @@
 </div>
 <script>
     function switchProduct(id){
-        window.location.href=`productpage.php?id=${id}`
+        window.location.href=`manage_stock.php?id=${id}`
     }
 </script>
 
