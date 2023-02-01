@@ -1,13 +1,13 @@
 
 <?php
-
+    include_once 'connection.php';
 if (isset($_POST["submit"])) {
 
-    $name = $_POST["name"];
-    $email = $_POST["email"];
-    $username = $_POST["uid"];
-    $pwd = $_POST["pwd"];
-    $pwdRepeat = $_POST["pwdrepeat"];
+    $name = mysqli_real_escape_string($conn, $_POST["fullname"]);
+    $email = mysqli_real_escape_string($conn, $_POST["email"]);
+    $username = mysqli_real_escape_string($conn, $_POST["uid"]);
+    $pwd = mysqli_real_escape_string($conn, $_POST["pwd"]);
+    $pwdRepeat = mysqli_real_escape_string($conn, $_POST["pwdrepeat"]);
 
     require_once 'connection.php';
     require_once 'functions.inc.php';

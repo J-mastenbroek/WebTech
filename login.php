@@ -1,8 +1,5 @@
 <?php
-
     include_once 'header.php';
-
-
 ?>
 
 <!DOCTYPE html>
@@ -15,25 +12,23 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" crossorigin="anonymous">
     <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet'>
 </head>
-    <body>
-
-
-<div class="title">
-     <h1>Log in</h1>
+<div class="under_nav">
+    <h1></h1>
 </div>
-<section class="signup-form">
-    <div class="loginpage">
-        <div class="singup-form-form">      
-            <form action="login.inc.php" method="post">
-                <input type="text" name="uid" placeholder="Username/Email...">
-                <input type="password" name="pwd" placeholder="Password...">
-                <button type="submit" name="submit">Log In</button>
-            </form>
+<body>
+    <section class="signup-form">
+        <div class="loginpage">
+            <div class="singup-form-form">      
+                <form action="login.inc.php" method="post">
+                    <input type="text" name="uid" placeholder="Username/Email... " value=<?php if(isset($_COOKIE["username"])) {echo $_COOKIE["username"];} ?>>
+                    <input type="password" name="pwd" placeholder="Password...">
+                    <button type="submit" name="submit">Log In</button>
+                </form>
+            </div>
         </div>
+    <div class="registerwarning">
+        <p>Don't have an account? Click <a href="signup.php"><span>here</span></a> to register!</p>
     </div>
-<div class="registerwarning">
-    <p>Don't have an account? Click <a href="signup.php"><span>here</span></a> to register!</p>
-</div>
     <?php
 
 if (isset($_GET["error"])) {
